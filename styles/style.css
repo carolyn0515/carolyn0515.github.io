@@ -116,17 +116,23 @@ a:hover { opacity:.9; }
   font-size:16px;      /* 이모지 크기 */
 }
 
-/* 이름/역할 옆 작은 연필 버튼도 동일하게 */
-.edit-btn{
-  display:none;
-  align-items:center; justify-content:center;
-  width:24px; height:24px; border-radius:8px; margin-left:6px;
-  border:1px solid var(--card-border); background:var(--bg-accent); color:var(--olive-strong);
-  font-size:14px; cursor:pointer;
+/* 공통 미니 버튼 */
+.tiny button,
+.edit-btn {
+  /* 사이즈 */
+  width:24px; height:24px; border-radius:8px;
+  border:1px solid var(--card-border);
+  background:var(--bg-accent); color:var(--olive-strong);
 
-  /* ✨ 중앙 정렬 */
-  display:inline-grid;
-  place-items:center;
-  padding:0;
-  line-height:1;
+  /* ✅ 완전 중앙 정렬 */
+  display:inline-flex !important;
+  align-items:center; justify-content:center;
+  padding:0; line-height:1; vertical-align:middle;
+  font-size:16px; cursor:pointer;
 }
+
+/* owner 모드에서만 보이게 */
+.tiny{display:none}
+.owner-on .tiny{display:inline-flex}
+.owner-on .edit-btn{display:inline-flex}
+
