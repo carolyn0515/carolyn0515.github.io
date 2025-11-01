@@ -97,3 +97,36 @@ a:hover { opacity:.9; }
   background:linear-gradient(90deg,var(--gold),transparent);
   border-radius:2px; margin-top:6px;
 }
+/* 작은 액션 아이콘 공통 */
+.tiny button{
+  /* 기존 width/height/border 등은 유지해도 됨 */
+  width:24px;
+  height:24px;
+  border-radius:8px;
+  border:1px solid var(--card-border);
+  background:var(--bg-accent);
+  color:var(--olive-strong);
+  cursor:pointer;
+
+  /* ✨ 중앙 정렬 핵심 */
+  display:inline-grid;
+  place-items:center;
+  padding:0;           /* 여백 제거 */
+  line-height:1;       /* baseline 영향 제거 */
+  font-size:16px;      /* 이모지 크기 */
+}
+
+/* 이름/역할 옆 작은 연필 버튼도 동일하게 */
+.edit-btn{
+  display:none;
+  align-items:center; justify-content:center;
+  width:24px; height:24px; border-radius:8px; margin-left:6px;
+  border:1px solid var(--card-border); background:var(--bg-accent); color:var(--olive-strong);
+  font-size:14px; cursor:pointer;
+
+  /* ✨ 중앙 정렬 */
+  display:inline-grid;
+  place-items:center;
+  padding:0;
+  line-height:1;
+}
